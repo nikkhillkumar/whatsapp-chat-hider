@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "My WhatsApp Extension",
+    "description": "This extension allows you to access WhatsApp Web.",
+    "version": "1.0",
+    "permissions": [
+        "https://web.whatsapp.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://web.whatsapp.com/*"],
+            "js": ["foreground.js"]
+        }
+    ],
+    "browser_action": {
+        "default_icon": "images/icon.png",
+        "default_popup": "popup.html"
+    }
+}
